@@ -1,0 +1,28 @@
+{
+  "name": "@terrascope/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./worker": "./src/analysis/worker.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "lint:deps": "eslint src"
+  },
+  "dependencies": {
+    "@terrascope/plugin-api": "workspace:*",
+    "maplibre-gl": "^6.19.0",
+    "proj4": "^2.23.0"
+  },
+  "devDependencies": {
+    "@types/proj4": "^2.19.0",
+    "@typescript-eslint/parser": "^8.46.0",
+    "eslint": "^9.39.0",
+    "typescript": "~5.9.3",
+    "vitest": "^5.1.2"
+  }
+}

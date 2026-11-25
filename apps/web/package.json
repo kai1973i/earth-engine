@@ -1,0 +1,30 @@
+{
+  "name": "@terrascope/web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@terrascope/core": "workspace:*",
+    "@terrascope/plugin-api": "workspace:*",
+    "@terrascope/plugin-basemap-osm": "workspace:*",
+    "@terrascope/plugin-dem-demo": "workspace:*",
+    "@terrascope/plugin-timeseries-demo": "workspace:*",
+    "@terrascope/ui-kit": "workspace:*",
+    "maplibre-gl": "^6.19.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.8"
+  }
+}

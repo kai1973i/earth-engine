@@ -1,0 +1,13 @@
+{
+  "id": "org.terrascope.basemap-osm",
+  "name": "OpenStreetMap base map",
+  "version": "0.1.0",
+  "author": "TerraScope contributors",
+  "license": "Apache-2.0",
+  "coreApi": "^0.1.0",
+  "description": "Raster base map from OpenStreetMap tiles, with full attribution and tile usage notes.",
+  "capabilities": ["layers", "ui", "network"],
+  "network": ["tile.openstreetmap.org"],
+  "icon": "map",
+  "entry": "src/index.ts"
+}

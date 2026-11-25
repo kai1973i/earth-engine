@@ -1,0 +1,13 @@
+{
+  "id": "org.terrascope.timeseries-demo",
+  "name": "MODIS time series",
+  "version": "0.1.0",
+  "author": "TerraScope contributors",
+  "license": "Apache-2.0",
+  "coreApi": "^0.1.0",
+  "description": "Time-aware MODIS true-colour imagery from NASA GIBS plus a temperature time series from Open-Meteo, analysed in a worker.",
+  "capabilities": ["layers", "ui", "analysis", "network"],
+  "network": ["gibs.earthdata.nasa.gov", "archive-api.open-meteo.com"],
+  "icon": "chart-line",
+  "entry": "src/index.ts"
+}

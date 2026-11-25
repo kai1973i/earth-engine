@@ -1,0 +1,14 @@
+node_modules/
+dist/
+dist-ssr/
+coverage/
+playwright-report/
+test-results/
+docs/api/
+*.local
+.env
+.env.*
+!.env.example
+.DS_Store
+.freebuff/
+*.log

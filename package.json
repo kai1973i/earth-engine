@@ -1,0 +1,27 @@
+{
+  "name": "terrascope",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "description": "Open-source geodata platform with a plugin-only data layer.",
+  "packageManager": "pnpm@10.24.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @terrascope/web dev",
+    "build": "pnpm --filter @terrascope/web build",
+    "preview": "pnpm --filter @terrascope/web preview",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "pnpm -r --if-present test",
+    "lint:deps": "pnpm --filter @terrascope/core lint:deps",
+    "size": "node scripts/check-bundle.mjs",
+    "docs:api": "node scripts/generate-api-docs.mjs",
+    "test:e2e": "playwright test",
+    "check": "pnpm lint:deps && pnpm typecheck && pnpm test && pnpm build && pnpm size"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "typescript": "~5.9.3"
+  }
+}

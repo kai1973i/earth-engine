@@ -1,0 +1,13 @@
+{
+  "id": "org.terrascope.dem-demo",
+  "name": "Elevation (Terrarium DEM)",
+  "version": "0.1.0",
+  "author": "TerraScope contributors",
+  "license": "Apache-2.0",
+  "coreApi": "^0.1.0",
+  "description": "Hillshade from Terrarium-encoded terrain tiles plus an elevation pixel inspector.",
+  "capabilities": ["layers", "ui", "network"],
+  "network": ["s3.amazonaws.com"],
+  "icon": "mountain",
+  "entry": "src/index.ts"
+}
