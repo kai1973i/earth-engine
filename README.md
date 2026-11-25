@@ -35,8 +35,8 @@ This repository contains the MVP defined by the project specification:
 | Backend (optional Fastify proxy) | not part of the MVP |
 | Script/code editor | not part of the MVP; architecture prepared (ADR 0006) |
 
-Known limitations and deliberate deviations are listed in
-[`docs/architecture.md`](docs/architecture.md#limitations).
+Known limitations and deliberate deviations are listed in the
+[architecture overview](docs/architecture.md#known-limitations--deviations).
 
 ## Quick start
 
