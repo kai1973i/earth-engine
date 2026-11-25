@@ -16,7 +16,7 @@ depends on a plugin, and a lint rule enforces it.
 
 ## Status
 
-This repository contains the MVP described in `earth-engine-clone-prompt.md`:
+This repository contains the MVP defined by the project specification:
 
 | Area | State |
 | --- | --- |
