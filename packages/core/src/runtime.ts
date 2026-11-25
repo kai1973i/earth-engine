@@ -5,6 +5,7 @@ import type {
   CoordinateApi,
   CoreEventMap,
   DataApi,
+  EventApi,
   Geometry,
   I18nApi,
   InspectorApi,
@@ -711,8 +712,20 @@ export class CoreRuntime {
     };
 
     const coordinates: CoordinateApi = this.coordinates;
-    const time: TimeApi = this.time;
-    const events = this.events;
+    const time: TimeApi = {
+      get: () => this.time.get(),
+      setInstant: (instant) => this.time.setInstant(instant),
+      setRange: (start, end) => this.time.setRange(start, end),
+      setResolution: (resolution) => this.time.setResolution(resolution),
+      resolveFor: (support) => this.time.resolveFor(support),
+      format: (instant, options) => this.time.format(instant, options),
+      onChange: (handler) => track(this.time.onChange(handler)),
+    };
+    // Event subscriptions are tracked so a plugin cannot leak listeners.
+    const events: EventApi = {
+      on: (event, handler) => track(this.events.on(event, handler)),
+      once: (event, handler) => track(this.events.once(event, handler)),
+    };
     const data: DataApi = this.data;
     const analysis: AnalysisApi = this.analysis;
     const inspector: InspectorApi = {
